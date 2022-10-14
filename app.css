@@ -1,0 +1,74 @@
+/*
+    Document   : override
+    Created on : <date>
+    Author     : <author>
+    Description:
+        This is where any of your application specific styles should be included
+*/
+
+.sendOffScreen {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.demo-oracle-icon {
+  width:137px;
+  height:18px
+}
+
+.demo-oracle-icon:before {
+  content:url("images/oracle_logo.svg")
+}
+
+html:not([dir="rtl"]) .demo-oracle-icon {
+  padding-right:4px
+}
+
+html[dir="rtl"] .demo-oracle-icon {
+  padding-left:4px
+}
+
+.demo-oracle-icon:before {
+  display:inline
+}
+
+.demo-appheader-avatar {
+  width:24px;
+  height:24px
+}
+
+.demo-appheader-avatar:before {
+  content:url("images/avatar_24px.png")
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .demo-appheader-avatar:before {
+      content:url("images/avatar_24px_2x.png");
+      -webkit-transform:translate(-25%, -25%) scale(0.5);
+      transform:translate(-25%, -25%) scale(0.5)
+  }
+}
+
+.button-add {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon-add {
+  display: block;
+  padding: 0 3px !important;
+  width: 32px;
+  height: 32px;
+  background: url("app_sprite.svg") -36px 0 no-repeat;
+  background-color: blue;
+}
+
+.oj-active .icon-add {
+  background: url("app_sprite.svg") 0 0 no-repeat;
+}

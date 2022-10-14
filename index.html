@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Oracle JET Starter Template - Web Nav Drawer</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
+    <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+
+    <!-- This is the main css file for the default theme -->
+<!-- injector:theme -->
+<link rel="stylesheet" href="https://static.oracle.com/cdn/jet/13.0.5/default/css/redwood/oj-redwood-min.css" id="basestyles" />
+<!-- <link rel="stylesheet" href="css/theme-redwood/13.0.5/web/theme.css" id="themestyle" /> -->
+<!-- endinjector -->
+
+    <!-- This contains icon fonts used by the starter template -->
+    <link rel="stylesheet" id="uxiconFont" href="https://static.oracle.com/cdn/fnd/gallery/2210.1.0/images/iconfont/ojuxIconFont.min.css">
+
+    <!-- This is where you would add any app specific styling -->
+    <link rel="stylesheet" href="app.css" type="text/css"/>
+
+  </head>
+  <body class="oj-web-applayout-body">
+
+    <div id="globalBody">
+      <h1>Tam Dang</h1>
+      <div id="announce" tabindex="-1" class="sendOffScreen" :aria-live="[[manner]]" aria-atomic="true">
+          <p id="ariaLiveMessage"><oj-bind-text value="[[message]]"></oj-bind-text></p>
+      </div>
+
+        <oj-module role="main" class="oj-web-applayout-max-width oj-web-applayout-content" config="[[moduleAdapter.koObservableConfig]]">
+        </oj-module>
+
+    </div>
+    <!-- This injects script tags for the main javascript files -->
+<!-- injector:scripts -->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js'></script>
+<script type='text/javascript' src='bundle.js'></script>
+<!-- endinjector -->
+
+  </body>
+
+</html>
